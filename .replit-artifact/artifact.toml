@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/"
+title = "BuzzAlert"
+version = "1.0.0"
+id = "artifacts/buzz-alert"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+localPort = 22874
+name = "expo"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/buzz-alert run dev"
+
+[services.env]
+PORT = "22874"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/buzz-alert", "run", "build"]
+run = ["pnpm", "--filter", "@workspace/buzz-alert", "run", "serve"]

@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "BuzzAlert",
+    "slug": "buzz-alert",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "buzz-alert",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0D1B2A"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "BuzzAlert needs your location to show safety alerts and risk zones near you.",
+        "NSLocationAlwaysUsageDescription": "BuzzAlert needs background location for Virtual Escort safety monitoring.",
+        "NSCameraUsageDescription": "BuzzAlert needs camera access to take photos when reporting incidents."
+      }
+    },
+    "android": {
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "BuzzAlert uses your location to provide real-time safety alerts."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
